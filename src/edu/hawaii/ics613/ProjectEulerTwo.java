@@ -7,6 +7,7 @@ import java.util.List;
  * Returns the sum of the even-valued Fibonacci values.
  *
  * Created by Branden Ogata on 2/1/2015.
+ *
  */
 
 public class ProjectEulerTwo {
@@ -34,7 +35,7 @@ public class ProjectEulerTwo {
   }
 
   /**
-   * Prints and returns the next Fibonacci number.
+   * Returns the next Fibonacci number.
    *
    * @param numbers    The List<Integer> containing the Fibonacci numbers thus far.
    *                   This List will also include the added Fibonacci number upon return.
@@ -49,16 +50,22 @@ public class ProjectEulerTwo {
     // If there are not enough numbers to calculate the Fibonacci sequence, add 1 to the list
     if (numbers.size() < 2) {
       numbers.add(next);
+
+/*
+      System.out.format("%d%n", numbers.get(numbers.size() - 1));
+ */
     }
 
     // Else the next number is the sum of the last two elements in the list
     else {
       numbers.add(numbers.get(numbers.size() - 1) + numbers.get(numbers.size() - 2));
       next = numbers.get(numbers.size() - 1);
-    }
 
-    System.out.format("%d + %d == %d%n", numbers.get(numbers.size() - 3), numbers.get(numbers.size() - 2),
-                                         numbers.get(numbers.size() - 1));
+/*
+      System.out.format("%d + %d == %d%n", numbers.get(numbers.size() - 3), numbers.get(numbers.size() - 2),
+                                           numbers.get(numbers.size() - 1));
+*/
+    }
 
     return next;
   }
